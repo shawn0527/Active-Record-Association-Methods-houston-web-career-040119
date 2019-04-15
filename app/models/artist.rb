@@ -13,8 +13,8 @@ class Artist < ActiveRecord::Base
     songs = Song.all.select do |song|
       song.artist == self
     end
-    
-    self.songs.size
+
+    songs.size
     binding.pry
   end
 
