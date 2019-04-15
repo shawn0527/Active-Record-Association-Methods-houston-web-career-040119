@@ -13,6 +13,9 @@ class Artist < ActiveRecord::Base
     songs = Song.all.select do |song|
       song.artist == self
     end.flatten.size
+
+    binding.pry
+    0
   end
 
   def genre_count
